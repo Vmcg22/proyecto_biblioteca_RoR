@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fecha_salida: 2020-08-01
+  fecha_entrada: 2020-08-01
+  user: one
+  book: one
+
+two:
+  fecha_salida: 2020-08-01
+  fecha_entrada: 2020-08-01
+  user: two
+  book: two

@@ -35,10 +35,6 @@ Author.all().each() do |autor|
     autor.update(ganancias_anuales: ganancia_random)
 end
 
-#Calcular el Promedio de Usuarios con 
-=end
-
-
 #Edito las ganancias_anuales con .round (Author):
 Author.all().each() do |a|
     #a.update(:ganancias_anuales => a.ganancias_anuales.round(2))
@@ -47,6 +43,19 @@ end
 #Suma de todas las Ganancias Totales (Author):
 total = Author.sum(:ganancias_anuales).to_f()
 puts "Total de Ganancias Anuales: $#{total}"
+
+=end
+
+book = Book.new(:titulo => "Del Amor y Otros Demonios", :idioma => "Español", :paginas => 460, :descripcion => "Novela de GGM")
+author = Author.find(4) #Autor con ID 4 => Gabriel Garcia
+categoria = Category.find(3) #Categoría con ID 3 => Novelas
+editorial = Editorial.find(1) #Editorial con ID 1 => Alfaomega
+
+author.books<<book #Agrego el Libro al Autor
+categoria.books<<book#Agrego el Libro a una Categoría
+editorial.books<<book#Agrego el Libro a una Editorial
+
+
 
 
 

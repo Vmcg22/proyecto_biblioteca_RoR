@@ -46,6 +46,8 @@ puts "Total de Ganancias Anuales: $#{total}"
 
 =end
 
+=begin
+    
 book = Book.new(:titulo => "Del Amor y Otros Demonios", :idioma => "Español", :paginas => 460, :descripcion => "Novela de GGM")
 author = Author.find(4) #Autor con ID 4 => Gabriel Garcia
 categoria = Category.find(3) #Categoría con ID 3 => Novelas
@@ -54,6 +56,25 @@ editorial = Editorial.find(1) #Editorial con ID 1 => Alfaomega
 author.books<<book #Agrego el Libro al Autor
 categoria.books<<book#Agrego el Libro a una Categoría
 editorial.books<<book#Agrego el Libro a una Editorial
+    
+=end
+
+#Usuarios (User):
+User.create(nombre: "Javier Vazquéz", telefono: "(+75) 759-4578", direccion: "Ruby #64", observaciones: "Ninguna")
+User.create(nombre: "Daniel Martínez", telefono: "(+45) 487-4986", direccion: "Naranjos #31", observaciones: "Observaciones de Daniel")
+
+
+#Author (Autor):
+Author.create(nombre: "Gabriel Garcia", nacionalidad: "Mexicana", idioma: "Español", ganancias_anuales: 900)
+Author.create(nombre: "Julio Verne", nacionalidad: "Francesa", idioma: "Francés", ganancias_anuales: 1500)
+
+#Category (Categoría):
+Category.create(categoria: "Novelas", descripcion: "Relatos de Literatura")
+Category.create(categoria: "Ficción", descripcion: "Relatos de Ciencia Ficción")
+Category.create(categoria: "Aventuras", descripcion: "Relatos de Aventuras")
+
+#Editorial (Editorial):
+Editorial.create(nombre: "Aguilar", pais: "España", telefono: "(+35) 475-127-5784")
 
 
 

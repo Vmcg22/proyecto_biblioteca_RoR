@@ -1,0 +1,23 @@
+<h1> Lista de Autores </h1>
+<p>Estos son los Autores de la BD.</p>
+
+<table border="-1">
+    <thead>
+        <tr>
+            <th> Nombre </th>
+            <th> Nacionalidad </th>
+            <th> Idioma </th>
+            <th> Ganancias Anuales </th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @autores.each() do |author| %>
+            <tr>
+                <td> <%= author.nombre %> </td>
+                <td> <%= author.nacionalidad %> </td>
+                <td> <%= author.idioma %> </td>
+                <td> <%= author.ganancias_anuales %> </td>
+            </tr>
+        <%end%>
+    </tbody>
+</table>

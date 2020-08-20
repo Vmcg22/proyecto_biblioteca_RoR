@@ -1,2 +1,23 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<h1> Lista de Usuarios </h1>
+<p>Estos son los Usuarios de la BD.</p>
+
+<table border="-1">
+    <thead>
+        <tr>
+            <th> Nombre </th>
+            <th> Teléfono </th>
+            <th> Dirección </th>
+            <th> Observaciones </th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @usuarios.each() do |user| %>
+            <tr>
+                <td> <%= user.nombre %> </td>
+                <td> <%= user.telefono %> </td>
+                <td> <%= user.direccion %> </td>
+                <td> <%= user.observaciones %> </td>
+            </tr>
+        <%end%>
+    </tbody>
+</table>

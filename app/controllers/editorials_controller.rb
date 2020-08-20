@@ -1,5 +1,6 @@
 class EditorialsController < ApplicationController
   def index
+    @editoriales = Editorial.all()
   end
 
   def show

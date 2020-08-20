@@ -1,2 +1,19 @@
-<h1>Categories#index</h1>
-<p>Find me in app/views/categories/index.html.erb</p>
+<h1> Lista de Categorías </h1>
+<p>Estas son las Categorías de la BD.</p>
+
+<table border="-1">
+    <thead>
+        <tr>
+            <th> Categoria </th>
+            <th> Descripción </th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @categorias.each() do |category| %>
+            <tr>
+                <td> <%= category.categoria %> </td>
+                <td> <%= category.descripcion %> </td>
+            </tr>
+        <%end%>
+    </tbody>
+</table>

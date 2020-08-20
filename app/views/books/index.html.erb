@@ -1,2 +1,36 @@
-<h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
+<h1> Lista de Libros </h1>
+<p>Estos son los Libros de la BD.</p>
+
+<table border="-1">
+    <thead>
+        <tr>
+            <th> Título </th>
+            <th> Idioma </th>
+            <th> Páginas </th>
+            <th> Descripción </th>
+            <th> Autor </th>
+            <th> Categoría </th>
+            <th> Editorial </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <% @libros.each() do |book| %>
+            <tr>
+                <td> <%= book.titulo %> </td>
+                <td> <%= book.idioma %> </td>
+                <td> <%= book.paginas %> </td>
+                <td> <%= book.descripcion %> </td>
+                <%unless book.author.nil?%>
+                    <td> <%= book.author.nombre %> </td>
+                <%end%>
+                <%unless book.category.nil?%>
+                    <td> <%= book.category.categoria %> </td>
+                <%end%>
+                <%unless book.editorial.nil?%>
+                    <td> <%= book.editorial.nombre %> </td>
+                <%end%>
+            </tr>
+        <%end%>
+    </tbody>
+</table>

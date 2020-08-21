@@ -4,6 +4,7 @@ class AuthorsController < ApplicationController
   end
 
   def show
+    @autor = Author.find(params[:id])
   end
 
   def new

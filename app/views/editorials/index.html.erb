@@ -7,6 +7,7 @@
             <th> Nombre </th>
             <th> País </th>
             <th> Teléfono </th>
+            <th> Acciones </th>
         </tr>
     </thead>
     <tbody>
@@ -15,6 +16,7 @@
                 <td> <%= editorial.nombre %> </td>
                 <td> <%= editorial.pais %> </td>
                 <td> <%= editorial.telefono %> </td>
+                <td> <%= link_to "Mostrar", action: 'show', id: editorial.id %> </td>
             </tr>
         <%end%>
     </tbody>

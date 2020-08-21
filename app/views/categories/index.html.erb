@@ -6,6 +6,8 @@
         <tr>
             <th> Categoria </th>
             <th> Descripción </th>
+            <th> Acciones </th>
+
         </tr>
     </thead>
     <tbody>
@@ -13,6 +15,7 @@
             <tr>
                 <td> <%= category.categoria %> </td>
                 <td> <%= category.descripcion %> </td>
+                <td> <%= link_to "Mostrar", action: 'show', id: category.id %> </td>
             </tr>
         <%end%>
     </tbody>

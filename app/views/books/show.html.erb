@@ -1,2 +1,41 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<h1>Mostrar Datos del Libro</h1>
+
+<h3>
+<strong> Título: </strong> 
+<%= @libro.titulo %>
+</h3>
+
+<h3>
+<strong> Idioma: </strong> 
+<%= @libro.idioma %>
+</h3>
+
+<h3>
+<strong> Páginas: </strong> 
+<%= @libro.paginas %>
+</h3>
+
+<h3>
+<strong> Descripción: </strong> 
+<%= @libro.descripcion %>
+</h3>
+
+<h3>
+<strong> Páginas: </strong> 
+<%= @libro.paginas %>
+</h3>
+
+<h3>
+<strong> Autor: </strong> 
+<%= @libro.author.nombre %>
+</h3>
+
+<h3>
+<strong> Categoría: </strong> 
+<%= @libro.category.categoria %>
+</h3>
+
+<h3>
+<strong> Editorial: </strong> 
+<%= @libro.editorial.nombre %>
+</h3>

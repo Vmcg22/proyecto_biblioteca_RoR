@@ -8,6 +8,7 @@
             <th> Nacionalidad </th>
             <th> Idioma </th>
             <th> Ganancias Anuales </th>
+            <th> Acciones </th>
         </tr>
     </thead>
     <tbody>
@@ -17,6 +18,7 @@
                 <td> <%= author.nacionalidad %> </td>
                 <td> <%= author.idioma %> </td>
                 <td> <%= author.ganancias_anuales %> </td>
+                <td> <%= link_to "Mostrar", action: 'show', id: author.id  %> </td>
             </tr>
         <%end%>
     </tbody>

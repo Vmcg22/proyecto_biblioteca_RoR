@@ -4,19 +4,23 @@
 <h1> Crear Nuevo Autor </h1>
 
 <%= form_for @author, url: {action: "create"}, html: {class: "css_class"} do |autor| %>
-    <p> Nombre </p>
+    <label form="nombre"> Nombre:</label> 
+    <br>
     <%= autor.text_field :nombre %>
     <br> <br>
 
-    <p> Nacionalidad </p>
+    <label form="nacionalidad"> Nacionalidad:</label> 
+    <br>
     <%= autor.text_field :nacionalidad %>
     <br> <br>
     
-    <p> Idioma </p>
+    <label form="idioma"> Idioma:</label> 
+    <br>
     <%= autor.text_field :idioma %>
     <br> <br>
 
-    <p> Ganancias Anuales </p>
+    <label form="ganancias"> Ganancias Anuales:</label> 
+    <br>
     <%= autor.text_field :ganancias_anuales %>
     <br> <br>
 

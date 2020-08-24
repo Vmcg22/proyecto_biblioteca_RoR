@@ -1,2 +1,28 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<%= link_to 'back', :back %>
+<br>
+
+<h1> Creación de Usuario </h1>
+
+<%= form_for @user, url: {action: "create"}, html: {class: "css_class"} do |usuario| %>
+    <label form="nombre"> Nombre:</label> 
+    <br>
+    <%= usuario.text_field :nombre %> 
+    <br> <br>
+
+    <label form="telefono"> Teléfono:</label> 
+    <br>
+    <%= usuario.text_field :telefono %> 
+    <br> <br>
+
+    <label form="direccion"> Dirección:</label> 
+    <br>
+    <%= usuario.text_field :direccion %> 
+    <br> <br>
+
+    <label form="observaciones"> Observaciones:</label> 
+    <br>
+    <%= usuario.text_field :observaciones %> 
+    <br> <br>
+
+    <%= usuario.submit "Crear Usuario" %>
+<%end%>

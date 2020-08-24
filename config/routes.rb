@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   get 'categories/index'
   get 'categories/show'
   get 'categories/new'
-  get 'categories/create'
+  post 'categories/create'
   get 'categories/edit'
   get 'categories/update'
   get 'categories/delete'

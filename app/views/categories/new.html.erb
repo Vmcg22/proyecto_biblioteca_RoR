@@ -1,2 +1,18 @@
-<h1>Categories#new</h1>
-<p>Find me in app/views/categories/new.html.erb</p>
+<%= link_to 'back', :back %>
+
+<h1> Crear Categoría </h1>
+
+<%= form_for @category, url: {action: "create"}, html: {class: "css_class"} do |categoria| %>
+    <label> Categoría: </label>
+    <br>
+    <%= categoria.text_field :categoria %>
+    <br> <br>
+
+    <label> Descripción: </label>
+    <br>
+    <%= categoria.text_field :descripcion %>
+    <br> <br>
+
+    <%= categoria.submit "Crear Categoría" %>
+
+<%end%>

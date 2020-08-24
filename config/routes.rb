@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get 'editorials/index'
   get 'editorials/show'
   get 'editorials/new'
-  get 'editorials/create'
+  post 'editorials/create'
   get 'editorials/edit'
   get 'editorials/update'
   get 'editorials/delete'

@@ -1,2 +1,28 @@
-<h1>Authors#edit</h1>
-<p>Find me in app/views/authors/edit.html.erb</p>
+<%= link_to 'back', :back %>
+
+<h1> Editar Datos de Autor </h1>
+
+<%= form_for @author, url: {action: 'update', id: @author.id}, html: {class: 'css_class'} do |a|%>
+    <label> Nombre: </label>
+    <br>
+    <%= a.text_field :nombre %>
+    <br> <br>
+
+    <label> Nacionalidad: </label>
+    <br>
+    <%= a.text_field :nacionalidad %>
+    <br> <br>
+
+    <label> Idioma: </label>
+    <br>
+    <%= a.text_field :idioma %>
+    <br> <br>
+
+    <label> Ganancias Anuales: </label>
+    <br>
+    <%= a.text_field :ganancias_anuales %>
+    <br> <br>
+
+    <%= a.submit "Editar Autor" %>
+    
+<%end%>

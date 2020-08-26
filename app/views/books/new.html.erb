@@ -1,2 +1,55 @@
-<h1>Books#new</h1>
-<p>Find me in app/views/books/new.html.erb</p>
+<%= link_to 'back', :back %>
+
+<h1> Nuevo Libro </h1>
+
+<%= form_for @book, url: {action: 'create'}, html: {class: "css_class"} do |libro| %>
+    <label> Título: </label>
+    <br>
+    <%= libro.text_field :titulo %>
+    <br> <br> 
+
+    <label> Idioma: </label>
+    <br>
+    <%= libro.text_field :idioma %>
+    <br> <br>
+
+    <label> Páginas: </label>
+    <br>
+    <%= libro.text_field :paginas %>
+    <br> <br>
+
+    <label> Descripción: </label>
+    <br>
+    <%= libro.text_field :descripcion %>
+    <br> <br>
+
+    <label> Selecciona el Autor:</label>
+
+    <br>
+    <select name="book[autor]" id="book_autor">
+        <% @autores.each do |a| %>
+            <option value="" > <%= a.nombre %> </option>
+        <%end%>
+    </select>
+    <br> <br>
+
+    <label> Selecciona la Categoría:</label>
+    <br>
+    <select>
+        <% @categorias.each do |c| %>
+            <option> <%= c.categoria %> </option>
+        <%end%>
+    </select>
+    <br> <br>
+
+    <label> Selecciona la Editorial:</label>
+    <br>
+    <select>
+        <% @editoriales.each do |e| %>
+            <option> <%= e.nombre %> </option>
+        <%end%>
+    </select>
+    <br> <br>
+
+    <%= libro.submit "Crear Libro" %>
+<%end%>

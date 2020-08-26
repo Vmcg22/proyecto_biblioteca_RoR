@@ -8,9 +8,14 @@ class BooksController < ApplicationController
   end
 
   def new
+    @book = Book.new
+    @autores = Author.all
+    @categorias = Category.all
+    @editoriales = Editorial.all
   end
 
   def create
+
   end
 
   def edit

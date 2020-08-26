@@ -29,7 +29,7 @@ Rails.application.routes.draw do
   get 'books/index'
   get 'books/show'
   get 'books/new'
-  get 'books/create'
+  post 'books/create'
   get 'books/edit'
   get 'books/update'
   get 'books/delete'
@@ -37,14 +37,16 @@ Rails.application.routes.draw do
   
   get 'authors/index'
   get 'authors/show'
-  get 'authors/new'
   #Post: Crea algo en el servidor
+  get 'authors/new'
   post 'authors/create'
+  #Patch: Permite hacer actualizaciones a la BD.
   get 'authors/edit'
-  get 'authors/update'
+  patch 'authors/update'
   get 'authors/delete'
   #Parámetro variable :id que se mapea a la acción: authors#show
   get 'authors/:id' => 'authors#show'
+  #get 'authors/update/:id' => 'authors#edit'
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

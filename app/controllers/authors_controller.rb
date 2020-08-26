@@ -12,6 +12,8 @@ class AuthorsController < ApplicationController
   #Crea una instancia del Modelo (Author)
   def new
     @author = Author.new()
+
+    @all_authors = Author.all
   end
 
   #Permite recibir los datos y guardarlos en la BD
@@ -35,10 +37,24 @@ class AuthorsController < ApplicationController
     redirect_to "/authors/#{@author.id}"
   end
 
+  #Edita registros existentes en la BD.
   def edit
+    @author = Author.find(params[:id])
   end
 
   def update
+    @author = Author.find(params[:id])
+
+    datos_autor = params[:author]
+
+    nombre = datos_autor[:nombre]
+    nacionalidad = datos_autor[:nacionalidad]
+    idioma = datos_autor[:idioma]
+    ganancias = datos_autor[:ganancias_anuales]
+
+    @author.update(nombre: nombre, nacionalidad: nacionalidad, idioma: idioma, ganancias_anuales: ganancias)
+
+    redirect_to "/authors/#{@author.id}"
   end
 
   def delete

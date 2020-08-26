@@ -2,6 +2,7 @@
 <p>Estos son los Autores de la BD.</p>
 
 <%= link_to "Crear Autor", action: 'new' %>
+
 <br>
 <br>
 <table border="-1">
@@ -21,7 +22,10 @@
                 <td> <%= author.nacionalidad %> </td>
                 <td> <%= author.idioma %> </td>
                 <td> <%= author.ganancias_anuales %> </td>
-                <td> <%= link_to "Mostrar", action: 'show', id: author.id  %> </td>
+                <td> 
+                    <%= link_to "Mostrar", action: 'show', id: author.id  %> 
+                    <%= link_to "Editar", action: 'edit', id: author.id  %> 
+                </td>
             </tr>
         <%end%>
     </tbody>

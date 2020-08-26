@@ -35,15 +35,17 @@ Rails.application.routes.draw do
   get 'books/delete'
   get 'books/:id' => 'books#show'
   
+  #Get: Visualizar Datos
   get 'authors/index'
   get 'authors/show'
-  #Post: Crea algo en el servidor
+  #Post: Crea algo en el servidor (Crea Registros)
   get 'authors/new'
   post 'authors/create'
   #Patch: Permite hacer actualizaciones a la BD.
   get 'authors/edit'
   patch 'authors/update'
-  get 'authors/delete'
+  #Delete: Permite hacer eliminaciones de registros a la BD.
+  delete 'authors/delete'
   #Parámetro variable :id que se mapea a la acción: authors#show
   get 'authors/:id' => 'authors#show'
   #get 'authors/update/:id' => 'authors#edit'

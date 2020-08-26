@@ -42,6 +42,7 @@ class AuthorsController < ApplicationController
     @author = Author.find(params[:id])
   end
 
+  #Actualiza los datos que se modifiquen en su vista
   def update
     @author = Author.find(params[:id])
 
@@ -57,6 +58,11 @@ class AuthorsController < ApplicationController
     redirect_to "/authors/#{@author.id}"
   end
 
+  #Elimina el registro según su "ID"
   def delete
+    @author = Author.find(params[:id])
+
+    @author.destroy
+    redirect_to "/authors/index"
   end
 end

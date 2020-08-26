@@ -24,7 +24,8 @@
                 <td> <%= author.ganancias_anuales %> </td>
                 <td> 
                     <%= link_to "Mostrar", action: 'show', id: author.id  %> 
-                    <%= link_to "Editar", action: 'edit', id: author.id  %> 
+                    <%= link_to "Editar", action: 'edit', id: author.id  %>
+                    <%= link_to "Eliminar", {action: 'delete', id: author.id}, method: :delete, data: {confirm: '¿Quieres Borrar este Autor?'} %> 
                 </td>
             </tr>
         <%end%>

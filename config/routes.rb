@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'users/new'
   post 'users/create'
   get 'users/edit'
-  get 'users/update'
+  patch 'users/update'
   get 'users/delete'
   get 'users/:id' => 'users#show'
 

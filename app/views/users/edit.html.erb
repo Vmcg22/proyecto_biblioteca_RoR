@@ -1,2 +1,27 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<%= link_to 'back', :back %>
+
+<h1> Editar Datos de Usuario </h1>
+
+<%= form_for @user, url: {action: 'update', id: @user.id}, html: {class: 'css_class'} do |u| %>
+    <label> Nombre: </label>
+    <br>
+    <%= u.text_field :nombre %>
+    <br> <br>
+
+    <label> Teléfono: </label>
+    <br>
+    <%= u.text_field :telefono %>
+    <br> <br>
+
+    <label> Dirección: </label>
+    <br>
+    <%= u.text_field :direccion %>
+    <br> <br>
+
+    <label> Observaciones: </label>
+    <br>
+    <%= u.text_field :observaciones %>
+    <br> <br>
+
+    <%= u.submit "Editar Usuario" %>
+<%end%>

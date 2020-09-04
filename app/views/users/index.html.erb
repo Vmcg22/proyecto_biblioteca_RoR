@@ -21,7 +21,10 @@
                 <td> <%= user.telefono %> </td>
                 <td> <%= user.direccion %> </td>
                 <td> <%= user.observaciones %> </td>
-                <td> <%= link_to "Mostrar", action: 'show', id: user.id %> </td>
+                <td> 
+                    <%= link_to "Mostrar", action: 'show', id: user.id %> 
+                    <%= link_to "Editar", action: 'edit', id: user.id %>
+                </td>
             </tr>
         <%end%>
     </tbody>

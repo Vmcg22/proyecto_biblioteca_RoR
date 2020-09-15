@@ -53,9 +53,14 @@ class AuthorsController < ApplicationController
     idioma = datos_autor[:idioma]
     ganancias = datos_autor[:ganancias_anuales]
 
-    @author.update(nombre: nombre, nacionalidad: nacionalidad, idioma: idioma, ganancias_anuales: ganancias)
+    if @author.update(nombre: nombre, nacionalidad: nacionalidad, idioma: idioma, ganancias_anuales: ganancias)
+      redirect_to "/authors/#{@author.id}"
+    else
+      # si hay algún error al momento de actualizar va renderizar a (/authors/edit)
+      render :edit
 
-    redirect_to "/authors/#{@author.id}"
+      #Si quisiera renderizar a otro controlador, lo hacemos así (render editorial/show)
+    end
   end
 
   #Elimina el registro según su "ID"

@@ -21,5 +21,10 @@ test:
   database: db/test_biblioteca.sqlite3
 
 production:
-  <<: *default
-  database: db/production_biblioteca.sqlite3
+  #<<: *default
+  #database: db/production_biblioteca.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # https://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
